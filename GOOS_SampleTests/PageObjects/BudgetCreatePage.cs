@@ -7,26 +7,30 @@ namespace GOOS_SampleTests.PageObjects
     {
         public BudgetCreatePage(FluentTest test) : base(test)
         {
+            this.Url = string.Format("{0}/budget/add", PageContext.Domain);
         }
 
         public BudgetCreatePage Amount(int amount)
         {
-            throw new NotImplementedException();
+            I.Enter(amount.ToString()).In("#amount");
+            return this;
         }
 
         public BudgetCreatePage Month(string yearMonth)
         {
-            throw new NotImplementedException();
+            I.Enter(yearMonth).In("#month");
+            return this;
         }
 
         public void AddBudget()
         {
-            throw new NotImplementedException();
+            I.Click("input[type=\"submit\"]");
         }
 
         public BudgetCreatePage ShouldDisplay(string message)
         {
-            throw new NotImplementedException();
+            I.Assert.Text(message).In("#message");
+            return this;
         }
     }
 }

@@ -120,6 +120,7 @@
       <DependentUpon>BudgetCreate.feature</DependentUpon>
     </Compile>
     <Compile Include="PageObjects\BudgetCreatePage.cs" />
+    <Compile Include="PageObjects\PageContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
